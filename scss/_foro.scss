@@ -1,0 +1,80 @@
+.main__foro {
+  @include grid(1, 1rem);
+
+  input {
+    max-height: 70px;
+    padding: 0.5rem;
+    border: solid $nav-color;
+    border-radius: 20px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  form {
+    @include flex(column, wrap, center, center);
+    gap: 1rem;
+
+    div {
+      @include grid(1, 1rem);
+      gap: 1rem;
+      width: 100%;
+      @include media-desktop() {
+        @include grid(2, 1rem);
+      }
+    }
+
+    fieldset {
+      width: 100%;
+      padding: 0.5rem;
+      border: solid $nav-color;
+      border-radius: 20px;
+      background-color: $footer-color;
+
+      legend {
+        padding: 0 0.5rem;
+      }
+
+      input {
+        padding: 0.2rem;
+        width: 100%;
+        border-color: transparent;
+        background-color: $footer-color;
+        color: white;
+      }
+
+      textarea {
+        width: 100%;
+        background-color: $footer-color;
+        border-color: transparent;
+        color: white;
+      }
+    }
+
+    button {
+      border: solid $nav-color;
+      border-radius: 20px;
+      padding: 0.5rem 0.8rem;
+      background-color: $footer-color;
+      color: white;
+    }
+  }
+
+  section {
+    @include flex(column, wrap, center, center);
+    gap: 1rem;
+
+    article {
+      a {
+        color: white;
+        margin: 1rem;
+        &:hover {
+          color: $nav-color;
+        }
+      }
+    }
+  }
+}

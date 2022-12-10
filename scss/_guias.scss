@@ -1,0 +1,42 @@
+.main__guias {
+  @include grid(1, 1rem);
+
+  input {
+    max-height: 70px;
+    padding: 0.5rem;
+    border: solid $nav-color;
+    border-radius: 20px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  section {
+    @include grid(1, 2rem);
+    @include media-tablet() {
+      @include grid(2, 1.5rem);
+    }
+    @include media-2k() {
+      @include grid(4, 1.5rem);
+    }
+
+    a {
+      @include flex(column, wrap, center, center);
+      color: white;
+      overflow: hidden;
+
+      &:hover {
+        color: $nav-color;
+      }
+
+      img {
+        transition: all 0.5s;
+        width: 100%;
+        &:hover {
+          scale: (1.2);
+        }
+      }
+    }
+  }
+}

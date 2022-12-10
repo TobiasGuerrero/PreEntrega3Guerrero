@@ -1,0 +1,133 @@
+header {
+  overflow: hidden;
+  background-color: $nav-color;
+  width: 100%;
+  @include flex(row, wrap, space-between, center);
+
+  .logo {
+    @include flex(row, wrap, center, center);
+    a {
+      img {
+        margin: 1rem;
+        height: 5rem;
+      }
+    }
+  }
+
+  button {
+    background-color: transparent;
+    margin: 1rem;
+    border: 0;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+
+      @include media-desktop() {
+        display: none;
+      }
+    }
+  }
+
+  nav {
+    height: 0vh;
+    width: 100%;
+    transition: all 0.5s ease;
+    @include flex(column, nowrap, center, center);
+    overflow: hidden;
+
+    @include media-desktop() {
+      width: auto;
+      height: 100%;
+    }
+    ul {
+      @include flex(column, nowrap, flex-end, center);
+      padding: 1rem;
+      @include media-desktop() {
+        @include flex(row, wrap, center, center);
+      }
+      li {
+        font-size: 1.5rem;
+        margin: 1rem;
+        list-style: none;
+        a {
+          transition: all 0.5s;
+          &:hover {
+            color: white;
+            border-bottom: solid;
+          }
+        }
+      }
+    }
+  }
+  .nav.activo {
+    height: 350px;
+    @include media-desktop() {
+      height: 100%;
+    }
+  }
+
+  form {
+    position: relative;
+    top: 15px;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+    box-shadow: 0px 0px 15px #ae4b4b;
+    @include media-desktop() {
+      top: 25px;
+    }
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 42.5px;
+      line-height: 30px;
+      outline: 0;
+      border: 0;
+      display: none;
+      font-size: 1em;
+      border-radius: 20px;
+      padding: 0 20px;
+    }
+
+    .fa {
+      box-sizing: border-box;
+      padding: 10px;
+      width: 42.5px;
+      height: 42.5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      color: #b92c2c;
+      text-align: center;
+      font-size: 1.2em;
+      transition: all 1s;
+    }
+  }
+
+  form:hover {
+    left: 100px;
+    width: 200px;
+    cursor: pointer;
+  }
+
+  form:hover input {
+    display: block;
+  }
+
+  form:hover .fa {
+    background: #b92c2c;
+    color: white;
+  }
+}

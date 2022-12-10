@@ -1,0 +1,39 @@
+.main__index {
+  h1,
+  h2 {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  section {
+    width: 100%;
+    @include grid(2, 1rem);
+
+    @include media-desktop() {
+      @include grid(4, 1rem);
+    }
+
+    article {
+      @include flex(column, wrap, center, center);
+
+      a {
+        color: white;
+        overflow: hidden;
+
+        &:hover {
+          color: $nav-color;
+        }
+
+        img {
+          max-width: 100%;
+          transition: 0.5s;
+          object-fit: cover;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}

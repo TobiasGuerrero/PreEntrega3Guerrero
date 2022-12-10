@@ -1,0 +1,51 @@
+.main__juegos {
+  @include grid(1, 1rem);
+  input {
+    padding: 0.5rem;
+    border: solid $nav-color;
+    border-radius: 20px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  section {
+    article {
+      h2 {
+        text-align: center;
+        margin: 2rem 0 0.5rem 0;
+        @include media-desktop() {
+          text-align: left;
+        }
+        a {
+          color: white;
+          &:hover {
+            color: $nav-color;
+          }
+        }
+      }
+
+      div {
+        @include flex(column, wrap, center, flex-start);
+        @include media-desktop() {
+          display: grid;
+          grid-template-columns: (1fr 2fr);
+          gap: 1rem;
+        }
+        a {
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            transition: 0.5s;
+            object-fit: cover;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
