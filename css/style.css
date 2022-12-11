@@ -174,30 +174,89 @@ header form:hover .fa {
 }
 
 footer {
-  height: 4rem;
   background-image: linear-gradient(#0b1a36, black);
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.2rem;
+  width: 100%;
 }
-footer ul {
+footer div {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+}
+@media screen and (min-width: 900px) {
+  footer div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+}
+footer div .izq {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  footer div .izq {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  footer div .izq img {
+    margin-top: 0.2rem;
+    height: 3rem;
+  }
+  footer div .izq p {
+    text-align: center;
+    color: white;
+    margin: 0.2rem 0;
+  }
+  footer div .izq form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  footer div .izq form input {
+    padding: 0.5rem 0.8rem;
+    width: 50%;
+    border: solid #ff5050;
+    border-radius: 20px;
+    background-color: #0b1a36;
+    color: white;
+  }
+  footer div .izq form button {
+    border: solid #ff5050;
+    border-radius: 20px;
+    padding: 0.5rem 0.8rem;
+    background-color: #0b1a36;
+    color: white;
+  }
+}
+footer div .cen {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 4rem;
 }
-footer ul li {
+@media screen and (min-width: 900px) {
+  footer div .cen {
+    height: 100%;
+  }
+}
+footer div .cen li {
   position: relative;
   list-style: none;
   margin: 0 15px;
   cursor: pointer;
 }
-footer ul li a {
+footer div .cen li a {
   text-decoration: none;
 }
-footer ul li a::before {
+footer div .cen li a::before {
   font-family: "FontAwesome";
   position: absolute;
   top: 0;
@@ -208,38 +267,69 @@ footer ul li a::before {
   transition: 0.5s ease-in-out;
 }
 @media screen and (min-width: 900px) {
-  footer ul li a::before {
+  footer div .cen li a::before {
     height: 0;
   }
 }
-footer ul li .fa-brands {
+footer div .cen li .fa-brands {
   font-size: 3em;
   color: #222;
 }
-footer ul li:nth-child(1) a::before {
+footer div .cen li:nth-child(1) a::before {
   content: "\f16d";
   background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: 4px solid #dc2743;
 }
-footer ul li:nth-child(2) a::before {
+footer div .cen li:nth-child(2) a::before {
   content: "\f230";
   color: #3b5998;
   border-bottom: 4px solid #3b5998;
 }
-footer ul li:nth-child(3) a::before {
+footer div .cen li:nth-child(3) a::before {
   content: "\f099";
   color: #1da1f2;
   border-bottom: 4px solid #1da1f2;
 }
-footer ul li:nth-child(4) a::before {
+footer div .cen li:nth-child(4) a::before {
   content: "\f16a";
   color: #c4302b;
   border-bottom: 4px solid #c4302b;
 }
-footer ul li:hover a::before {
+footer div .cen li:hover a::before {
   height: 100%;
+}
+footer div .der {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  footer div .der {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  footer div .der ul li {
+    list-style: none;
+  }
+  footer div .der ul li a {
+    color: white;
+  }
+  footer div .der ul li a:hover {
+    color: #ff5050;
+  }
+}
+footer .copy {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+footer .copy small {
+  color: white;
 }
 
 .main__index h1,
