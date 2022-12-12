@@ -63,4 +63,12 @@
       }
     }
   }
+
+  ul {
+    @include flex(column, wrap, center, center);
+    gap: 0.5rem;
+    li {
+      border-bottom: solid;
+    }
+  }
 }

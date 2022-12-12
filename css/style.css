@@ -633,5 +633,15 @@ footer .copy small {
   background-color: #0b1a36;
   color: white;
 }
+.main__contactos ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main__contactos ul li {
+  border-bottom: solid;
+}
 
 /*# sourceMappingURL=style.css.map */
