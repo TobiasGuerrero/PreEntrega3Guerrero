@@ -67,6 +67,7 @@
   ul {
     @include flex(column, wrap, center, center);
     gap: 0.5rem;
+    width: 100%;
     li {
       border-bottom: solid;
     }

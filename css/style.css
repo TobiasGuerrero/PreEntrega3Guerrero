@@ -639,6 +639,7 @@ footer .copy small {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  width: 100%;
 }
 .main__contactos ul li {
   border-bottom: solid;
