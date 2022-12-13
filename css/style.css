@@ -55,6 +55,7 @@ header button {
 header button svg {
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 }
 @media screen and (min-width: 900px) {
   header button svg {
