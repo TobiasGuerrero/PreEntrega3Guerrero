@@ -30,6 +30,19 @@ header {
     }
   }
 
+  .button__x {
+    display: none;
+  }
+  .button__x.activo {
+    display: block;
+    @include media-desktop() {
+      display: none;
+    }
+  }
+  .button__menu.activo {
+    display: none;
+  }
+
   nav {
     height: 0vh;
     width: 100%;
